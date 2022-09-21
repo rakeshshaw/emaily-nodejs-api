@@ -18,10 +18,7 @@ app.use(passport.session());
 
 // all the route calls
 require("./routes/auth")(app);
-
-app.get("/", (req, res) => {
-  res.send({ hi: "there" });
-});
+require("./routes/hello")(app);
 
 const PORT = process.env.PORT || 5000;
 
